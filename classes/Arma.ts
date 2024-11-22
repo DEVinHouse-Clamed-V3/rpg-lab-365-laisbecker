@@ -1,12 +1,13 @@
 export default class Arma {
     //atributos
-    private nome: string = ''
+    private readonly nome: string = ''
     private dano: number = 0
     private readonly descricao: string = ''
 
     constructor(nome: string, descricao: string, dano: number = 0){
         this.nome = nome
         this.descricao = descricao
+        this.dano = dano
     }
 
     getNome(){return this.nome}
