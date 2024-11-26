@@ -7,6 +7,7 @@ export default class Inimigo extends Personagem {
             console.log('Ataque do inimigo falhou')
         } else {
             personagem.receberDano(this.causarDano())
+            console.log('Dano no guerreiro!')
         }
     }
 }

@@ -25,7 +25,7 @@ export default class Personagem {
     receberDano(dano: number) {
         this.vida = this.vida - dano
         if (this.vida < 0) {
-            console.log('Personagem F')
+            console.log('Personagem morto')
         }
     }
 
@@ -35,5 +35,11 @@ export default class Personagem {
         } else {
             return this.forca + this.arma?.getDano()
         }
+    }
+
+    atacar(alvo: Personagem) {
+        const dano = this.causarDano() // Calcula o dano
+        console.log(`${this.nome} ataca ${alvo.getNome()} e causa ${dano} de dano`)
+        alvo.receberDano(dano)
     }
 }
